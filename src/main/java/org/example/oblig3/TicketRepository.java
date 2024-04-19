@@ -23,7 +23,7 @@ public class TicketRepository {
     }
 
     public List getAllTickets(){
-        String sql = "SELECT * FROM TICKET";
+        String sql = "SELECT * FROM TICKET ORDER BY last_name";
         return db.query(sql, new BeanPropertyRowMapper(Ticket.class));
     }
 
@@ -32,13 +32,12 @@ public class TicketRepository {
         db.update(sql);
     }
 
-    //Fiks imorgen
-    /*public void deleteTicketById(int id){
+    public void deleteTicketById(int id){
         String sql = "DELETE FROM TICKET WHERE ID = ?";
         db.update(sql, id);
     }
 
-     */
+
 }
 
 

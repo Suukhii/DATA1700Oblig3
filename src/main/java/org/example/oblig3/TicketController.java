@@ -33,12 +33,11 @@ public class TicketController {
         rep.deleteAllTickets();
     }
 
-/*
-    @DeleteMapping("/deleteOne/{id}") // Endpoint to delete one ticket by ID
+
+    @PostMapping("/deleteOne/{id}") // Endpoint to delete one ticket by ID
     public void deleteOneTicket(@PathVariable int id) {
         rep.deleteTicketById(id);
     }
 
- */
 
 }
